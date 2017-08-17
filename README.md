@@ -15,11 +15,11 @@ crowdsales called virtual public offerings. Share prices during these offerings 
 
 ## Rollout
 Currently, five VPOs have been listed each selling 2000 virtual shares at a 75% discount.
-* EFacebook - 0x123f681646d4a755815f9cb19e1acc8565a0c2ac
-* EApple - 0x123f681646d4a755815f9cb19e1acc8565a0c2ac
-* EAmazon - 0x123f681646d4a755815f9cb19e1acc8565a0c2ac
-* ENetflix - 0x123f681646d4a755815f9cb19e1acc8565a0c2ac
-* EGoogle - 0x123f681646d4a755815f9cb19e1acc8565a0c2ac
+* EFacebook - FIX
+* EApple - FIX
+* EAmazon - FIX
+* ENetflix - FIX
+* EGoogle - FIX
 
 For example, sending 1 ether to the EFacebook crowdsale would give you FIX virtual shares.
 
@@ -28,7 +28,7 @@ You can buy shares by sending ether to any of the five addresses listed above. D
 crowdsale.
 
 ```javascript
-web3.eth.sendTransaction({from: web3.eth.accounts[1], to: '0x123f681646d4a755815f9cb19e1acc8565a0c2ac', value: web3.toWei(1, 'ether')})
+web3.eth.sendTransaction({from: web3.eth.accounts[1], to: 'FIX', value: web3.toWei(1, 'ether')})
 ```
 **NOTE:** Make sure that you understand the risks before participating in any crowdsale! As of now these tokens are non-refundable.
 
