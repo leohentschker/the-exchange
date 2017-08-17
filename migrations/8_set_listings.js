@@ -19,4 +19,4 @@ module.exports = async (deployer, network, accounts) => {
 	await exchange.addToken("EAMZN", amazon.address)
 	await exchange.addToken("ENFLX", netflix.address)
 	await exchange.addToken("EGOOGL", google.address)
-};
+}

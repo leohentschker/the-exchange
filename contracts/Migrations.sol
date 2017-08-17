@@ -1,4 +1,4 @@
-// NOTE: This is the default truffle contract
+// NOTE: This is the default truffle migrations contract
 pragma solidity ^0.4.2;
 
 contract Migrations {

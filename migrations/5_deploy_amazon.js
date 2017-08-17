@@ -1,12 +1,15 @@
-var deploymentManager = require('./stockDeployer')
-var AmazonCrowdsale = artifacts.require("./AmazonCrowdsale.sol")
+var helper = require('./deploymentHelper')
 
-module.exports = function(deployer, network, accounts) {
-	let initialShares = 100
-	let startBlock = deploymentManager.getStartBlock(web3.eth.blockNumber)
-	let endBlock = deploymentManager.getEndBlock(web3.eth.blockNumber)
-	let wallet = accounts[0]
+const STOCK_PRICE = 978.18
 
-	let amazonDeploy = deploymentManager.rateAndCap(initialShares, 157.48, 318.93, .25)
-	deployer.deploy(AmazonCrowdsale, startBlock, endBlock, amazonDeploy.rate, amazonDeploy.cap, wallet)
-};
+module.exports = async (deployer, _, accounts) =>
+  helper.stockDeployer(
+    deployer,
+    artifacts.require("./AmazonCrowdsale.sol"),
+    accounts[0],
+    web3.eth.blockNumber,
+    helper.INITIAL_SHARES,
+    STOCK_PRICE,
+    helper.ETH_PRICE,
+    helper.INITIAL_DISCOUNT
+  )

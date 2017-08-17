@@ -1,12 +1,15 @@
-var deploymentManager = require('./stockDeployer')
-var GoogleCrowdsale = artifacts.require("./GoogleCrowdsale.sol")
+var helper = require('./deploymentHelper')
 
-module.exports = function(deployer, network, accounts) {
-	let initialShares = 100
-	let startBlock = deploymentManager.getStartBlock(web3.eth.blockNumber)
-	let endBlock = deploymentManager.getEndBlock(web3.eth.blockNumber)
-	let wallet = accounts[0]
+const STOCK_PRICE = 944.27
 
-	let googleDeploy = deploymentManager.rateAndCap(initialShares, 157.48, 318.93, .25)
-	deployer.deploy(GoogleCrowdsale, startBlock, endBlock, googleDeploy.rate, googleDeploy.cap, wallet)
-};
+module.exports = async (deployer, _, accounts) =>
+  helper.stockDeployer(
+    deployer,
+    artifacts.require("./GoogleCrowdsale.sol"),
+    accounts[0],
+    web3.eth.blockNumber,
+    helper.INITIAL_SHARES,
+    STOCK_PRICE,
+    helper.ETH_PRICE,
+    helper.INITIAL_DISCOUNT
+  )
