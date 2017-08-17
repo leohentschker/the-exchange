@@ -24,19 +24,3 @@ crowdsale.
 web3.eth.sendTransaction({from: web3.eth.accounts[1], to: 'FIX', value: web3.toWei(.01, 'ether')})
 ```
 **NOTE:** Make sure that you understand the risks before participating in any crowdsale!
-
-## How many tokens of a stock represents a single share?
-As of now 10<sup>21</sup> tokens represents a single stock share. This high number was chosen to ensure that accurate prices
-can be assigned to the different tokens during crowdsales.
-
-## What can I do with the shares I have purchased?
-Because you are purchasing ERC20 tokens, you can do whatever you want! You can transfer  to other addresses, use them in your
-own smart contracts, 
-
-## Does this just make insider trading easier?
-A fair criticism against the exchange is that by allowing users to buy stocks from an Ethereum address, it would simply make
-insider trading and other illegal financial activities easier.
-
-However, I would argue that bringing stock trading to the blockchain would have the opposite effect for two reasons. First, unlike traditional
-stock exchanges, all trades are public on the blockchain. Therefore, anyone with an Ethereum node can see if 
-Secondly, the Ethereum community has proved to have an unbelievable track record in discovering and thwarting malicious actors in the network. One 
