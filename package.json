@@ -60,7 +60,8 @@
     "redux-auth-wrapper": "^1.0.0",
     "redux-thunk": "^2.2.0",
     "sweetalert2": "^6.6.8",
-    "uport-connect": "^0.6.1"
+    "uport-connect": "^0.6.1",
+    "zeppelin-solidity": "^1.2.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
