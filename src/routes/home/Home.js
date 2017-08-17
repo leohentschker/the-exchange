@@ -49,28 +49,26 @@ export default class Home extends Component {
           <hr />
           <div className="action-items">
             <h2>Why build The Exchange?</h2>
-            <h4 className="margin-top">
-              To quote Vitalik Buterin, decentralized systems are fault tolerant, attack resistant and collusiion
-              Decentralized consensus has radically altered how computer scientists think about
-
-              The purpose of The Exchange is to put financial markets in the hands of the people. Putting
-              stocks on the blockchain opens up opportunities that simply aren't available in traditional
-              financial markets. For example, users could create 
-              Our goal is to build financial tools for the blockchain. To quote Vitalik Buterin, decentralized We want to create a blockchain-based stock portal
-              that would allow users to buy and sell on The Exchange just as they would on the New York Stock Exchange.
-              We want to build a decentralized hedge fund that would let distribute the profits fairly.
-              We want to build exchange contracts that allow allow users to meet in the middle on price, without high-frequency
-              traders taking the difference. And, more than anything else, we want to see how the crypto community can 
-              leverage a decentralized network to change modern finance.
+            <h4>
+              Putting stocks on the blockchain opens up opportunities that simply don't exist
+              in traditional financial markets. Properly designed smart contracts
+              can make sure that the average investor has the same opportunities as a hedge
+              fund manager. However, an Ethereum-based exchange also creates security
+              risks. In order to get the benefits of decentralization while mitigating
+              the risk of vulnerabilities, the Ethereum community needs an open-sourced
+              community-reviewed codebase. That is exactly what The Exchange hopes to be.
             </h4>
           </div>
           <div className="explanation">
             <h2>How does The Exchange work?</h2>
             <h4 className="margin-top">
-              At its core, The Exchange is a collection of ERC20 compliant tokens. Each one of these tokens
+              Right now, The Exchange is a collection of ERC20 compliant tokens. Each one of these tokens
               represents a publicly traded stock and users can become "virtual stockholders" by purchasing them.
               Because these virtual shares are ERC20 compliant, they can be bought, sold or traded
-              just like the stocks you are used to.
+              with other Ethereum users.
+            </h4>
+            <h4 className="margin-top">
+              With community support, we will be deploying more contracts soon!
             </h4>
           </div>
           <div className="action-items">
@@ -116,8 +114,7 @@ export default class Home extends Component {
           <h2 className="padding-top-large">Get Involved</h2>
           <h4 className="margin-top have-faith">
             Just like the US economy, the exchange only works if people believe in it.
-            If you want to help build the exchange, check out the code or tell us why you
-            think this will never work, go to our <a href="https://www.dagithub.com">FIX</a>!
+            If you want to be a part of this (or just check out the codebase), go <a href="https://www.dagithub.com">here</a>!
           </h4>
         </main>
       </div>
