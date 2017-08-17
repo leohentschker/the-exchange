@@ -47,37 +47,34 @@ export default class Home extends Component {
             </div>
           </div>
           <hr />
-          <div className="action-items">
+          <div className="margin-top-large">
             <h2>Why build The Exchange?</h2>
             <h4>
               Putting stocks on the blockchain opens up opportunities that simply don't exist
               in traditional financial markets. Properly designed smart contracts
               can make sure that the average investor has the same opportunities as a hedge
               fund manager. However, an Ethereum-based exchange also creates security
-              risks. In order to get the benefits of decentralization while mitigating
+              problems. In order to get the benefits of decentralization while mitigating
               the risk of vulnerabilities, the Ethereum community needs an open-sourced
               community-reviewed codebase. That is exactly what The Exchange hopes to be.
             </h4>
           </div>
-          <div className="explanation">
-            <h2>How does The Exchange work?</h2>
-            <h4 className="margin-top">
+          <div>
+            <h2 className="margin-top-large">How does The Exchange work?</h2>
+            <h4>
               Right now, The Exchange is a collection of ERC20 compliant tokens. Each one of these tokens
               represents a publicly traded stock and users can become "virtual stockholders" by purchasing them.
               Because these virtual shares are ERC20 compliant, they can be bought, sold or traded
-              with other Ethereum users.
-            </h4>
-            <h4 className="margin-top">
-              With community support, we will be deploying more contracts soon!
+              with other Ethereum users. With community support, we will be deploying more contracts soon.
             </h4>
           </div>
-          <div className="action-items">
+          <div className="margin-top-large">
             <h2>What can I do on Day 0?</h2>
-            <h4 className="margin-top">
+            <h4>
               On Day 0, The Exchange is selling 2000 shares of five virtual stocks: EFacebook,
               EApple, EAmazon, ENetflix and EGoogle. As a bonus to Day 0 participants, these shares are
-              being sold at a 75% discount of their current price. Shares can be purchased by sending
-              funds to the addresses listed below.
+              being sold at a 75% discount of their current price in Ether as of 4pm EST August 18, 2017.
+              Shares can be purchased by sending funds to the addresses listed below.
             </h4>
           </div>
         </main>
@@ -114,7 +111,7 @@ export default class Home extends Component {
           <h2 className="padding-top-large">Get Involved</h2>
           <h4 className="margin-top have-faith">
             Just like the US economy, the exchange only works if people believe in it.
-            If you want to be a part of this (or just check out the codebase), go <a href="https://www.dagithub.com">here</a>!
+            If you want to be a part of this (or just check out the codebase), go <a href="https://github.com/leohentschker/the-exchange">here</a>!
           </h4>
         </main>
       </div>

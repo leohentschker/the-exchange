@@ -13,7 +13,7 @@ contract GoogleToken is MintableToken {
 contract GoogleCrowdsale is ExchangeCrowdsale {
 
   function GoogleCrowdsale(uint256 _startTime, uint256 _endTime, uint256 _rate, uint256 _cap, address _wallet)
-    ExchangeCrowdsale(_startTime, _endTime, _rate, _cap, _wallet, "EGoogle", "ENFLX")
+    ExchangeCrowdsale(_startTime, _endTime, _rate, _cap, _wallet, "EGoogle", "EGOOGL")
   {}
 
   function createTokenContract() internal returns (MintableToken) {

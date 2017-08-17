@@ -2,7 +2,7 @@ const WEIPERETH = Math.pow(10, 18)
 const TOKEN_DECIMALS = Math.pow(10, 21)
 
 const calculateRate = (stockPrice, ethereumPrice, discount) =>
-    Math.floor(ethereumPrice / stockPrice * discount * TOKEN_DECIMALS / WEIPERETH)
+    Math.floor(ethereumPrice / stockPrice / discount * TOKEN_DECIMALS / WEIPERETH)
 
 const calculateCap = (sharesCap, rate) =>
     Math.floor(sharesCap * TOKEN_DECIMALS / rate)
@@ -27,3 +27,5 @@ module.exports.ETH_PRICE = 157.48
 module.exports.INITIAL_DISCOUNT = .25
 
 module.exports.INITIAL_SHARES = 2000
+
+module.exports.FACEBOOK_PRICE = 170.0
