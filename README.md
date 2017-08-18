@@ -13,22 +13,22 @@ virtual shares will correspond to a single traditional share.
 * **Virtual Public Offering (VPO)** - In order to introduce shares into the market, The Exchange will sell virtual shares in crowdsales called virtual public offerings. Share prices during these offerings will correspond to the relative price of the stock in Ether. In order to incentivize early adopters, early VPOs will be severely discounted but only sell a limited number of virtual shares.
 
 ## Rollout
-Currently, five VPOs have been listed each selling 2 * 10<sup>24</sup> virtual shares (2,000 standard shares) at a 75% discount.
+Currently, five VPOs have been listed each selling 2 * 10<sup>24</sup> virtual shares (2,000 standard shares) at a 75% discount of their price in Ether at Friday, July 18, 4:00pm EST.
 * EFacebook
-* * Crowdsale address - 
-* * Token address - 
+  * Crowdsale address - 
+  * Token address - 
 * EApple
-* * Crowdsale address - 
-* * Token address - 
+  * Crowdsale address - 
+  * Token address - 
 * EAmazon
-* * Crowdsale address - 
-* * Token address - 
+  * Crowdsale address - 
+  * Token address - 
 * ENetflix
-* * Crowdsale address - 
-* * Token address - 
+  * Crowdsale address - 
+  * Token address - 
 * EGoogle
-* * Crowdsale address - 
-* * Token address - 
+  * Crowdsale address - 
+  * Token address - 
 
 ## How to participate in a virtual public offering
 You can buy shares by sending ether to any of the crowdsale addresses listed above. You can do this in your favorite Ethereum wallet or on the command line. Here is an example sending 1 ether to the EApple crowdsale two different ways
@@ -36,7 +36,7 @@ You can buy shares by sending ether to any of the crowdsale addresses listed abo
 ```javascript
 web3.eth.sendTransaction({from: web3.eth.accounts[1], to: 'FIX', value: web3.toWei(1, 'ether')})
 ```
-For example, sending 1 ether to the EFacebook crowdsale, you get FIX virtual shares.
+Based on the exchange rate as of writing this, you get FIX virtual shares.
 
 **NOTE:** Make sure that you understand the risks before participating in any crowdsale! As of now these tokens are non-refundable.
 
