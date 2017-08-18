@@ -45,7 +45,7 @@ After participating in one of the VPOs, wallets with ERC20 support (like the Eth
 FIX
 
 ## Moving forwards
-The next step is to start building contracts that allow users to do more with their virtual shares. To weigh in on what you are most interested in seeing (or get involved in the building process), comment [here](https://github.com/leohentschker/the-exchange/issues/1).
+The next step is to start building contracts that allow users to do more with their virtual shares. To weigh in on what you are most interested in seeing (or get involved in the building process) comment [here](https://github.com/leohentschker/the-exchange/issues/1).
 
 ## Security
 Obviously, security is crucial for any application on the blockchain. In order to mitigate vulnerabilities, all token contracts and crowdsales inherit from open-sourced contracts built by [OpenZeppelin](https://openzeppelin.org/). If you find a security risk in one of the contracts, **please** email lhentschker@gmail.com
