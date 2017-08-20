@@ -311,8 +311,8 @@
           "type": "event"
         }
       },
-      "updated_at": 1502989907237,
-      "address": "0x2d57115c46cc6acf0220202e732b9a5e70a8e0c9"
+      "updated_at": 1502997655986,
+      "address": "0xd734b6ec958c702c62b09683e1f5d756c96a0ff9"
     },
     "3": {
       "events": {
@@ -436,5 +436,5 @@
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1502997170498
+  "updated_at": 1502997655986
 }

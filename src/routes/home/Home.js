@@ -48,7 +48,7 @@ export default class Home extends Component {
           </div>
           <hr />
           <div className="margin-top-large">
-            <h2>Why build The Exchange?</h2>
+            <h2>Why build a decentralized stock exchange?</h2>
             <h4>
               Putting stocks on the blockchain opens up opportunities that simply don't exist
               in traditional financial markets. Properly designed smart contracts
@@ -60,12 +60,12 @@ export default class Home extends Component {
             </h4>
           </div>
           <div>
-            <h2 className="margin-top-large">How does The Exchange work?</h2>
+            <h2 className="margin-top-large">What does The Exchange look like now?</h2>
             <h4>
-              Right now, The Exchange is a collection of ERC20 compliant tokens. Each one of these tokens
+              Currently, it is a collection of ERC20 compliant tokens. Each one of these tokens
               represents a publicly traded stock and users can become "virtual stockholders" by purchasing them.
               Because these virtual shares are ERC20 compliant, they can be bought, sold or traded
-              with other Ethereum users. With community support, we will be deploying more contracts soon.
+              with other Ethereum users.
             </h4>
           </div>
           <div className="margin-top-large">
