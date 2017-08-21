@@ -1,3 +1,4 @@
+// needed for async/await
 require('regenerator-runtime/runtime')
 
 // Allows us to use ES6 in our migrations and tests.
