@@ -8,7 +8,7 @@ import "./ExchangeToken.sol";
 /**
  * @title Exchange
  * @dev A decentralized stock market with live data
- *      feeds built using streamr
+ *      feeds (populated using streamr)
  */
 contract Exchange is Ownable {
 
