@@ -8,11 +8,10 @@ import "zeppelin-solidity/contracts/token/MintableToken.sol";
  */
 contract ExchangeToken is MintableToken {
 
-  uint256 public constant decimals = 21;
+  uint256 public constant decimals = 24;
   string public symbol;
 
   function ExchangeToken(string _symbol) {
     symbol = _symbol;
   }
-
 }

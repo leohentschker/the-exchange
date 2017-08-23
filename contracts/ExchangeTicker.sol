@@ -28,9 +28,6 @@ contract ExchangeTicker is Ownable {
   * @return rate of the stock
   */
   function getRate(string _symbol) constant returns (uint256) {
-    // make sure we have a legitimate value
-    require(rates[_symbol] > 0);
-
     return rates[_symbol];
   }
 }

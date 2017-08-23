@@ -9,6 +9,7 @@ class StockStream:
     """
 
     LISTED_STOCKS = ["FB", "AAPL", "AMZN", "NFLX", "GOOG"]
+    LISTED_STOCKS = ["GOOG"]
 
     def __init__(self, stream_id, auth_key):
 		self.BASE_URL = "https://www.streamr.com/api/v1/streams/%s/data?auth=%s" % (stream_id, auth_key)

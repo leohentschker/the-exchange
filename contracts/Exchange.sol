@@ -17,6 +17,8 @@ contract Exchange is Ownable {
 
   mapping (string => address) tokens;
 
+  event Test(uint256 rate);
+
   /**
   * @dev Create a ticker
   * @param _tickerAddr Address of the ticker to read from
@@ -51,7 +53,6 @@ contract Exchange is Ownable {
   * @param _symbol Symbol of the stock to look up
   */
   function lookup (string _symbol) constant returns (address) {
-    require(tokens[_symbol] != address(0));
     return tokens[_symbol];
   }
 
@@ -65,6 +66,10 @@ contract Exchange is Ownable {
 
     // determine how many tokens 1 Wei is worth
     uint256 rate = ticker.getRate(_symbol);
+
+    // make sure we are buying a valid stock
+    require(rate > 0);
+
     uint256 numTokens = SafeMath.mul(msg.value, rate);
 
     // make sure the token exists
