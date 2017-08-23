@@ -13,6 +13,7 @@ import "./ExchangeToken.sol";
 contract Exchange is Ownable {
 
   ExchangeTicker public ticker;
+  address wallet;
 
   mapping (string => address) tokens;
 
@@ -20,8 +21,9 @@ contract Exchange is Ownable {
   * @dev Create a ticker
   * @param _tickerAddr Address of the ticker to read from
   */
-  function Exchange(address _tickerAddr) {
+  function Exchange(address _tickerAddr, address _wallet) {
     ticker = ExchangeTicker(_tickerAddr);
+    wallet = _wallet;
   }
 
   /**
@@ -50,5 +52,8 @@ contract Exchange is Ownable {
 
     // mint the tokens
     ExchangeToken(tokens[_symbol]).mint(msg.sender, numTokens);
+
+    // forward the funds to the wallet
+    wallet.transfer(msg.value);
   }
 }
