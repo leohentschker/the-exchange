@@ -18,9 +18,18 @@ contract Exchange is Ownable {
 
   /**
   * @dev Create a ticker
+  * @param _tickerAddr Address of the ticker to read from
   */
-  function Exchange() {
-    ticker = new ExchangeTicker();
+  function Exchange(address _tickerAddr) {
+    ticker = ExchangeTicker(_tickerAddr);
+  }
+
+  /**
+  * @dev Change the address of the ticker to read from
+  * @param _newAddr New address to read from
+  */
+  function updateTicker(address _newAddr) {
+    ticker = ExchangeTicker(_newAddr);
   }
 
   /**
