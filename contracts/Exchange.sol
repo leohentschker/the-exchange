@@ -30,8 +30,29 @@ contract Exchange is Ownable {
   * @dev Change the address of the ticker to read from
   * @param _newAddr New address to read from
   */
-  function updateTicker(address _newAddr) {
+  function updateTicker(address _newAddr)
+    onlyOwner()
+  {
     ticker = ExchangeTicker(_newAddr);
+  }
+
+  /**
+  * @dev Flush extra funds stored in the contract
+  * @param _amount Amount of Wei to send
+  */
+  function flush(uint256 _amount)
+    onlyOwner()
+  {
+    wallet.transfer(_amount);
+  }
+
+  /**
+  * @dev Look up the address for one of the stocks
+  * @param _symbol Symbol of the stock to look up
+  */
+  function lookup (string _symbol) constant returns (address) {
+    require(tokens[_symbol] != address(0));
+    return tokens[_symbol];
   }
 
   /**
@@ -39,11 +60,12 @@ contract Exchange is Ownable {
   * @param _symbol Symbol of the stock to buy
   */
   function buy (string _symbol) payable {
+    // ensure the purchase is valid
+    require(msg.value > 0);
 
     // determine how many tokens 1 Wei is worth
     uint256 rate = ticker.getRate(_symbol);
-    uint256 weiAmount = msg.value;
-    uint256 numTokens = SafeMath.mul(weiAmount, rate);
+    uint256 numTokens = SafeMath.mul(msg.value, rate);
 
     // make sure the token exists
     if (tokens[_symbol] == address(0)) {
@@ -56,4 +78,5 @@ contract Exchange is Ownable {
     // forward the funds to the wallet
     wallet.transfer(msg.value);
   }
+
 }

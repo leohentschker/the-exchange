@@ -13,13 +13,14 @@ contract('ExchangeTicker', async (accounts) => {
 
     // make sure that we can't get the symbol if no
     // rate has been set
-    expectThrow(ticker.getRate(SYMBOL))
+    expectThrow(ticker.getRate.call(SYMBOL))
 
     // make sure that non-owners can't set the symbol
     expectThrow(ticker.setRate(SYMBOL, 2, { from: user2 }))
 
     // make sure that the owner can set the rate
-    ticker.setRate(SYMBOL, 2, { from: user1 })
+    await ticker.setRate(SYMBOL, 2, { from: user1 })
+
     assert.equal(await ticker.getRate.call(SYMBOL), 2, "Couldn't update rate")
   })
 })
