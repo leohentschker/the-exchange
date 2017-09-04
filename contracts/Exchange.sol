@@ -17,8 +17,6 @@ contract Exchange is Ownable {
 
   mapping (string => address) tokens;
 
-  event Test(uint256 rate);
-
   /**
   * @dev Create a ticker
   * @param _tickerAddr Address of the ticker to read from
@@ -83,5 +81,4 @@ contract Exchange is Ownable {
     // forward the funds to the wallet
     wallet.transfer(msg.value);
   }
-
 }

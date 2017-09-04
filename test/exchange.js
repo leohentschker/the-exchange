@@ -19,7 +19,7 @@ contract('Exchange', (accounts) => {
       "Didn't set ticker address")
   })
 
-  it('Make sure only the owner can use the ticker', async () => {
+  it('Make sure only the owner can update the ticker', async () => {
     let exchange = await Exchange.deployed()
 
     // make sure it throws coming from the incorrect user
@@ -37,20 +37,5 @@ contract('Exchange', (accounts) => {
 
     // make sure we can't get the address before it's set
     expectThrow(exchange.lookup.call(SYMBOL))
-  })
-
-  it('Test ticker permissioning', async () => {
-    let ticker = await ExchangeTicker.deployed()
-    expectThrow(ticker.setRate(SYMBOL, RATE, { from: user2 }))
-  })
-
-  it('Test setting rates', async () => {
-    let exchange = await Exchange.deployed()
-    let ticker = await ExchangeTicker.deployed()
-
-    // set the rate for our symbol
-    await ticker.setRate(SYMBOL, RATE)
-
-    assert.equal(await ticker.getRate(SYMBOL), RATE, "Didn't set rate")
   })
 })
